@@ -4,7 +4,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/elearn', function () {
-    return view('welcome');
+    return view('index');
 })->name('home');
 
 Route::group(['middleware'=>'guest'], function(){
