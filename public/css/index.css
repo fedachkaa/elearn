@@ -131,7 +131,7 @@ header p {
 .icon.major {
     text-align: center;
     cursor: default;
-    background-color: #37c0fb;
+    background-color: #5bf7fa;
     color: #fff;
     border-radius: 100%;
     display: inline-block;
@@ -151,9 +151,10 @@ header p {
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
+button[type="submit"],
 .button {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    background-color: #37c0fb;
+    background-color: #5bf7fa;
     border-radius: 5px;
     border: 0;
     color: #fff;
