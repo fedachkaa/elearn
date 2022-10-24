@@ -47,7 +47,11 @@ class UserController extends Controller
             'email'=>$request->email,
             'password'=>$request->password,
         ])){
-            session()->flash('success', 'Користувча авторизовано');
+            if(Auth::user()->is_admin){
+                return redirect()->route('admin');
+            }else{
+                return redirect()->home();
+            }
             return redirect()->home();
         }
 

@@ -109,5 +109,33 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.sidebar {
+    position: absolute;
+    width: 17em;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    background-color: #333;
+    visibility: visible;
+    -webkit-backface-visibility: hidden;
+}
+
+
+
+.sidebar-nav {
+    position: fixed;
+  //width: 13 em;
+    background-color: #333;
+    height: 100%;
+    font-weight: 400;
+    font-size: 1.2em;
+    overflow: auto;
+    padding-bottom: 6em;
+    z-index: 9;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+
 
 

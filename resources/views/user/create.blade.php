@@ -15,7 +15,7 @@
                 <input type="password" name="password" placeholder="Введіть пароль">
                 <input type="password" name="password_confirmation" placeholder="Повторіть пароль">
                 <button type="submit" class="btn btn-primary btn-block">Зареєструватись</button>
-                <p class="message">Уже зареєстровані? <strong><a href="{{ route('login.create') }}">Увійти</a></p></strong>
+                <p class="message">Уже зареєстровані? <strong><a href="{{ route('login.create') }}">Увійти</a></strong></p>
             </form>
         </div>
     </div>

@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin\AdminQuestionController;
 use App\Http\Controllers\QuestionController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/elearn', function () {
@@ -16,6 +19,11 @@ Route::group(['middleware'=>'guest'], function(){
 });
 
 Route::get('elearn/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
+
+Route::group(['prefix'=>'elearn/admin', 'middleware'=>'admin'],function () {
+    Route::get('/', [AdminController::class, 'index'])->name('admin');
+    Route::resource('/tests', AdminQuestionController::class);
+});
 
 Route::get('elearn/testing/result', [QuestionController::class, 'result'])->name('result');
 Route::get('elearn/testing/result-clear', [QuestionController::class, 'clear'])->name('result-clear');
