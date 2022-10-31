@@ -21,9 +21,9 @@
                 </section>
                 <section class="col-3">
                     <div class="box highlight">
-                        <i class="icon major fa fa-pie-chart"></i>
-                        <h3>Популярні відповіді</h3>
-                        <p> Переглядай тести, де роблять найбільше/найменше помилок! </p>
+                        <i class="icon major fa fa-floppy-o"></i>
+                        <h3>Результати в PDF</h3>
+                        <p> Завантажуй власні результати в PDF-форматі та ділись з друзями! </p>
                     </div>
                 </section>
             </div>

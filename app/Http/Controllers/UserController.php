@@ -50,9 +50,11 @@ class UserController extends Controller
             if(Auth::user()->is_admin){
                 return redirect()->route('admin');
             }else{
+                if(!session()->has(Auth::user()->email)){
+                    session()->put(Auth::user()->email, []);
+                }
                 return redirect()->home();
             }
-            return redirect()->home();
         }
 
         return redirect()->back()->with('error', 'Неправильно введена електронна пошта та/або пароль');

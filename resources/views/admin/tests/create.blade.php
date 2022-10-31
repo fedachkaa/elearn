@@ -1,9 +1,16 @@
-@extends('admin.index')
+@extends('layouts.index')
 
 @section('content')
     <div class="create-test-form">
-        <form action="{{ route('tests.store') }}" method="post" >
+        <form action="{{ route('tests.store') }}" method="post">
             @csrf
+            <div>
+                <label>
+                    Номер питання:
+                    <textarea rows="2" name="id" readonly>{{$count+1}}</textarea>
+                </label>
+            </div>
+
             <div>
                 <label>
                     Питання:

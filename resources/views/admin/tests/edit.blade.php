@@ -1,8 +1,8 @@
-@extends('admin.index')
+@extends('layouts.index')
 
 @section('content')
     <div class="create-test-form">
-        <form action="{{ route('tests.update', ['test'=>$question->id]) }}" method="post" >
+        <form action="{{ route('tests.update', ['test'=>$question->id]) }}" method="post">
             @csrf
             @method('PUT')
             <div>

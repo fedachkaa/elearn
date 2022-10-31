@@ -1,7 +1,12 @@
-@extends('layouts.main')
-
-@section('content')
-    <div style="text-align: center">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результати</title>
+</head>
+<body>
+<div style="font-family: DejaVu Sans,sans-serif">
+    <h1 style="text-align: center">Результати {{ $name }}</h1>
+    <div>
         @if(session()->has(1))
             @for($i = 1; $i<$count+1; $i++)
                 @if(session()->get($i)[0] == null)
@@ -12,16 +17,9 @@
                     <p style="color: red">Питання №{{$i}}: Неправильно. </p>
                 @endif
             @endfor
-            <p> Результат: {{$correct_answers}}/ {{$count}}</p>
-            <form action="{{ route('result')  }}" method="get">
-                @method('POST')
-                <input type="submit" name="loadResult" value="Завантажити результати">
-            </form>
-                <a href="{{route('result-clear')}}">Очистити результати</a>
-
-        @else
-            <p>Ще немає відповідей...</p>
         @endif
-
+        <h3 style="text-align: center"> Результат: {{$correct_answers}}/ {{$count}}</h3>
     </div>
-@endsection
+</div>
+</body>
+</html>

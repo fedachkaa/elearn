@@ -12,7 +12,7 @@ class AdminQuestionController extends Controller
     public function index()
     {
         $questions = Question::all();
-        return view('admin.show-tests', compact('questions'));
+        return view('admin.tests.show-tests', compact('questions'));
     }
 
     /**
@@ -21,7 +21,8 @@ class AdminQuestionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(){
-        return view('admin.create');
+        $count = Question::all()->count();
+        return view('admin.tests.create', compact('count'));
     }
 
     /**
@@ -53,7 +54,7 @@ class AdminQuestionController extends Controller
     public function edit($id)
     {
         $question = Question::where('id', $id)->first();
-        return view('admin.edit', compact('question'));
+        return view('admin.tests.edit', compact('question'));
     }
 
 
