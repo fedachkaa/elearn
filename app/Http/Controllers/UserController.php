@@ -26,7 +26,6 @@ class UserController extends Controller
             'email'=>$request->email,
             'password'=>bcrypt($request->password),
         ]);
-        session()->flash('success', 'Реєстрація успішно пройдена!');
         Auth::login($user);
         return redirect()->home();
     }
@@ -50,9 +49,6 @@ class UserController extends Controller
             if(Auth::user()->is_admin){
                 return redirect()->route('admin');
             }else{
-                if(!session()->has(Auth::user()->email)){
-                    session()->put(Auth::user()->email, []);
-                }
                 return redirect()->home();
             }
         }

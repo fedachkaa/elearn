@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{ asset('elearn/public/css/user.css') }}">
 </head>
 <body>
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul class="list-unstyled">

@@ -31,7 +31,7 @@ return [
         'array' => 'The :attribute must have between :min and :max items.',
     ],
     'boolean' => 'The :attribute field must be true or false.',
-    'confirmed' => 'The :attribute confirmation does not match.',
+    'confirmed' => 'Паролі не співпадають',
     'current_password' => 'The password is incorrect.',
     'date' => 'The :attribute is not a valid date.',
     'date_equals' => 'The :attribute must be a date equal to :date.',
@@ -145,19 +145,33 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
-    ],
+        'email' => [
+            'required' => 'Введіть електронну пошту',
+        ],
+        'password' => [
+            'required' => 'Введіть пароль',
+        ],
+        'name' => [
+            'required' => "Введіть ім'я",
+        ],
+        'password_confirmation'=> [
+            'required'=> "Підтвердіть пароль",
+        ],
+        'confirmed' => 'Паролі не співпадають',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Attributes
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used to swap our attribute placeholder
-    | with something more reader friendly such as "E-Mail Address" instead
-    | of "email". This simply helps us make our message more expressive.
-    |
-    */
+
+        /*
+        |--------------------------------------------------------------------------
+        | Custom Validation Attributes
+        |--------------------------------------------------------------------------
+        |
+        | The following language lines are used to swap our attribute placeholder
+        | with something more reader friendly such as "E-Mail Address" instead
+        | of "email". This simply helps us make our message more expressive.
+        |
+        */
 
     'attributes' => [],
+    ]
 
 ];

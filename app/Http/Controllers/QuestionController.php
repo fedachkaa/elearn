@@ -31,18 +31,12 @@ class QuestionController extends Controller
 
 
     public function result(){
-        $text = "";
         $correct_answers = 0;
         $count = Question::all()->count();
         if(session()->has(1)){
             for($i = 1; $i<=$count; $i++){
-                $text .= "Питання №" .$i . ": ";
                 if(session()->get($i)[0] != null && session()->get($i)[0] == session()->get($i)[1]){
                     $correct_answers+=1;
-                    $text .= 'Правильно' . '\n';
-                }
-                else {
-                    $text .= 'Неправильно' . '\n';
                 }
             }
             $user = User::find(Auth::user()->id);
